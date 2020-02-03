@@ -36,6 +36,7 @@ namespace Capstone.Controllers.V1
             return Ok(applicationDbContext);
         }
 
+        [HttpGet]
         // GET: Dogs/Details/5
         //public async Task<IActionResult> Details(int? id)
         //{
@@ -44,20 +45,19 @@ namespace Capstone.Controllers.V1
         //        return NotFound();
         //    }
 
-        //    var dog = await _context.Dog
-        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //    var dog = await _context.Dog.FirstOrDefaultAsync(m => m.Id == id);
         //    if (dog == null)
         //    {
         //        return NotFound();
         //    }
 
-        //    return View(dog);
+        //    return Ok(dog);
         //}
 
         // GET: Dogs/Create
         //public IActionResult Create()
         //{
-        //    return View();
+        //    return Ok();
         //}
 
         // POST: Dogs/Create
