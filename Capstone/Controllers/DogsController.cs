@@ -13,7 +13,7 @@ using Capstone.Routes.V1;
 namespace Capstone.Controllers.V1
 {
     [ApiController]
-    [Route("api/[controller]")]
+    //[Route("api/[controller]/{dog}")]
     public class DogsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -27,7 +27,7 @@ namespace Capstone.Controllers.V1
 
         }
         
-        [HttpGet]
+        [HttpGet(Api.Dog.GetAll)]
         // GET: Dogs
         public async Task<IActionResult> Index()
         {
@@ -36,23 +36,23 @@ namespace Capstone.Controllers.V1
             return Ok(applicationDbContext);
         }
 
-        [HttpGet]
-        // GET: Dogs/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
+        [HttpGet(Api.Dog.Get)]
+        // GET: Dogs/Details/
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-        //    var dog = await _context.Dog.FirstOrDefaultAsync(m => m.Id == id);
-        //    if (dog == null)
-        //    {
-        //        return NotFound();
-        //    }
+            var dog = await _context.Dog.FirstOrDefaultAsync(m => m.Id == id);
+            if (dog == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(dog);
-        //}
+            return Ok(id);
+        }
 
         // GET: Dogs/Create
         //public IActionResult Create()
