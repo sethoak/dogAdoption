@@ -28,6 +28,7 @@ namespace Capstone.Routes.V1
         {
             public const string GetAll = Base + "/Dog";
             public const string Get = Base + "/Dog/{id}";
+            public const string Post = Base + "/Dog/Create";
         }
     }
 }

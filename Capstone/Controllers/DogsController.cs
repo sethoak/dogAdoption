@@ -51,9 +51,10 @@ namespace Capstone.Controllers.V1
                 return NotFound();
             }
 
-            return Ok(id);
+            return Ok(dog);
         }
 
+        [HttpGet(Api.Dog.Get)]
         // GET: Dogs/Create
         //public IActionResult Create()
         //{
@@ -63,8 +64,8 @@ namespace Capstone.Controllers.V1
         // POST: Dogs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[HttpPost(Api.Dog.Post)]
+        //[ValidateAntiForgeryToken]
         //public async Task<IActionResult> Create([Bind("Id,Name,Sex,Breed,Size,Description,Location,AnimalFriendly,CatFriendly,HouseTrained,LeashTrained,Neutered")] Dog dog)
         //{
         //    if (ModelState.IsValid)
@@ -73,7 +74,7 @@ namespace Capstone.Controllers.V1
         //        await _context.SaveChangesAsync();
         //        return RedirectToAction(nameof(Index));
         //    }
-        //    return View(dog);
+        //    return Ok(dog);
         //}
 
         // GET: Dogs/Edit/5

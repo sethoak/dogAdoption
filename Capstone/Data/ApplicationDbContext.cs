@@ -25,7 +25,6 @@ namespace Capstone.Data
             base.OnModelCreating(modelBuilder);
 
 
-
             //Creat some Dogs
 
             Dog dog1 = new Dog
