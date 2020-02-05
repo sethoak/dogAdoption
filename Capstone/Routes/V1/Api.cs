@@ -23,5 +23,13 @@ namespace Capstone.Routes.V1
             public const string Register = Base + "/Auth/Register";
             public const string Refresh = Base + "/Auth/Refresh";
         }
+
+        public static class Dog
+        {
+            public const string GetAll = Base + "/Dog";
+            public const string Get = Base + "/Dog/{id}";
+            public const string Post = Base + "/Dog";
+            public const string Edit = Base + "/Dog/{id}";
+        }
     }
 }

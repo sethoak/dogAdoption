@@ -43,5 +43,6 @@ namespace Capstone.Models.Data
 
         [Required]
         public bool Neutered { get; set; }
+
     }
 }
