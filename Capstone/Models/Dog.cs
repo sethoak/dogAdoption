@@ -11,6 +11,13 @@ namespace Capstone.Models.Data
         public int Id { get; set; }
 
         [Required]
+
+        public int PetId { get; set; }
+
+        [Required]
+        public int Age { get; set; }
+
+        [Required]
         [StringLength(20, ErrorMessage = "Please shorten the name to 20 characters")]
         public string Name { get; set; }
 
